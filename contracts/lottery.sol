@@ -37,9 +37,15 @@ contract Lottery{
         require(players.length >= 3);
         
         uint rand = random() % players.length;
-        address payable addr = players[rand];
-            
-        addr.transfer(getBalance());
+        address payable winner = players[rand];
+        
+        //calculate 10% fee for the manager and 90% winning prize
+        uint managerFee = (getBalance() * 10) / 100;
+        uint winnerPrize = (getBalance() * 90) / 100;
+
+        winner.transfer(winnerPrize);
+        payable(manager).transfer(managerFee);
+
         resetLottery();
     }
 

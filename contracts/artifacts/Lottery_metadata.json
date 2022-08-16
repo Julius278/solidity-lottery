@@ -116,11 +116,11 @@
 	},
 	"sources": {
 		"contracts/lottery.sol": {
-			"keccak256": "0xb18bd569823592e7d77b1e4ca14b2fa97d43cd954ad94c32845c689115937729",
+			"keccak256": "0x89a73960e2424e94ea1360dc9f3724b631780b3bbe38e622a710a966af3a12cf",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://003c01227f5f60c93b3d2526604d619f48a6256c4d7cd6aae381440a5d9ff994",
-				"dweb:/ipfs/QmSJoLNDQYNpAbn5xCFgxXCWFsZKQz93m37uqHWnnwpwE1"
+				"bzz-raw://93f24f61217ebacaedff83eeeb87dce4d7fd42459f636801bd12d1e95ac1ca72",
+				"dweb:/ipfs/QmTLiZS8icjWG1hQmaLHS4yygWxbAcPZLysj9wdT1RZeUk"
 			]
 		}
 	},
