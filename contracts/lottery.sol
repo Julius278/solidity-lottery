@@ -14,6 +14,7 @@ contract Lottery{
 
     receive() external payable{
         require(msg.value == 0.1 ether);
+        require(msg.sender != manager);
         players.push(payable(msg.sender));
     }
 
