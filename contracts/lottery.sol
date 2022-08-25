@@ -22,8 +22,12 @@ contract Lottery{
         revert();
     }
 
-    function getBalance() public view returns(uint){
+    modifier managerOnly(){
         require(msg.sender == manager);
+        _;
+    }
+
+    function getBalance() public view managerOnly returns(uint){
         return address(this).balance;
     }
 
@@ -32,8 +36,7 @@ contract Lottery{
     sends the balance to the winner,
     resets the lottery players board
     */ 
-    function pickWinner() public{
-        require(manager == msg.sender);
+    function pickWinner() public managerOnly{
         require(players.length >= 3);
         
         uint rand = random() % players.length;
